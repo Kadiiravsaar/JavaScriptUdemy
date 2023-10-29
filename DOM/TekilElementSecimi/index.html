@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekli Elementler Seçimi</title>
+</head>
+
+<body>
+
+
+    <div class="card-header">
+        <h3 id="title">Todo App</h3>
+        <h3 class="cart-title g1" id="title2">Todo App</h3>
+    </div>
+
+    <ul id="task-list">
+        <li>Görev 1</li>
+        <li>Görev 2</li>
+        <li>Görev 3</li>
+        <li>Görev 4</li>
+    </ul>
+
+
+
+
+    <script>
+        // <!-- document.getelementByID("title") ==> Id ile bir seçim -->
+        let sonuc;
+        sonuc = document.getElementById("title"); // <h3 id="title">Todo App</h3> yazacaktır
+
+        sonuc = document.getElementById("title").id; // title yazacaktır
+
+        sonuc = document.getElementById("title2").className; // cart-title yazacaktır
+
+        sonuc = document.getElementById("title2").classList; // { "0": "cart-title", "1": "g1" } yazacaktır dizi olarak
+
+
+        document.getElementById("title").style.fontSize = "30px"; // css özelliklerini değiştirir
+
+        document.getElementById("title").innerText = "Todo App bilgisi";
+        document.getElementById("title").innerHTML = "<p>Todo App bilgisi</p>";
+
+        sonuc = document.querySelector("#title") // class'a ulaşmak için
+
+        sonuc = document.querySelector(".card-header") // class'a ulaşmak için
+
+        sonuc = document.querySelector("div") // ilk bulduğu div'i yakalar
+
+
+        ////////////////////////////////////////////////////////
+
+        sonuc = document.querySelector("li"); // li elementinin dizi olarak getirir
+
+        sonuc = document.querySelector("li:first-child"); // li elementinin ilk elemanı
+        sonuc = document.querySelector("li:last-child"); // li elementinin ilk elemanı
+        sonuc = document.querySelector("li:nth-child(2)"); // li elementinin 2. elemanı
+
+
+
+
+
+        console.log(sonuc);
+
+
+
+    </script>
+</body>
+
+</html>
