@@ -18,9 +18,25 @@
                     <div class="card-header">
                         Todo app
                     </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="txtTaskName" id="txtTaskName">
+                                <button type="submit" class="btn btn-primary" id="btnAddNewTask">
+                                    Ekle
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="card mt-3">
+
+                    <div class="card-header">
+
+                        <button class="btn btn-danger btn-sm float-end" id="Clear"> Temizle</button>
+
+                    </div>
                     <ul id="task-list" class="list-group list-group-flush">
 
                     </ul>
@@ -28,13 +44,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
 
     <script>
         // "use strict";  bu kodu yazarsan kurallara uymak zorunda olduğunu belirtir mesela alt satırdaki ul tipsiz ve bunu kabul etmez
@@ -62,28 +71,51 @@
             // afterbegin yaparsak ters çevirecek
         }
 
+        // butona tıklama anında çalıştıracağım.
+        let btnEkle = document.querySelector("#btnAddNewTask");
 
-        // document.querySelector("#task-list").remove();
-        // document.querySelector("#task-list").parentElement.remove(); // tasklistin bi üst elementine
-
-        // document.querySelector("#task-list").children[0].remove();
-        // document.querySelector("#task-list").children[1].remove();
-
-
-        // document.querySelector("#task-list").removeAttribute("class") // ul etiketndeki class atrbiture silinir
-
-        //document.querySelector("#task-list").children[1].removeAttribute("class");
-
-        // let sonuc = document.querySelector("#task-list").children[1].getAttribute("class"); // bir class var mı bakılır getirilir
+        // btnEkle.addEventListener("click", function () {
+        //     console.log("Click Event") // butona tıklandığı anda bu yazacak
+        //     // buttnon type button yaparsak sayfa yenilenmez
+        //     // ancak benim submit yapmam gerek
+        // })
 
 
-        // document.querySelector("#task-list").children[1].setAttribute("class", "aa"); // class'ı sildik yerine aa attık
+        btnEkle.addEventListener("click", function (event) {
+            console.log("Click Event : Ekle") // butona tıklandığı anda bu yazacak
+            event.preventDefault(); // ilgili elemanın normal davranışını kapat
+            // ancak benim submit yapmam gerek
+        })
 
-        // let sonuc = document.querySelector("#task-list").children[1].classList;
-        let sonuc = document.querySelector("#task-list").children[1].classList.add("bg-danger"); // class ekledik
+
+        // bu da olur
+        // document.querySelector("#btnAddNewTask").addEventListener("click", function (event) {
+        //     console.log("Click Event") // butona tıklandığı anda bu yazacak
+        //     event.preventDefault(); // ilgili elemanın normal davranışını kapat
+        //     // ancak benim submit yapmam gerek
+        // })
 
 
-        console.log(sonuc)
+
+        document.querySelector("#Clear").addEventListener("click", function (event) {
+            console.log("Click Event: Temizle") // butona tıklandığı anda bu yazacak
+            event.preventDefault(); // ilgili elemanın normal davranışını kapat
+            // ancak benim submit yapmam gerek
+        })
+
+
+
+        // bu da diğer yol
+        
+        // document.querySelector("#Clear").addEventListener("click", temizleYeni)
+
+        // function temizleYeni(event) {
+        //     console.log("Click Event: Temizle") // butona tıklandığı anda bu yazacak
+        //     event.preventDefault(); // ilgili elemanın normal davranışını kapat
+        //     // ancak benim submit yapmam gerek
+        // }
+
+
 
 
 
