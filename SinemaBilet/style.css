@@ -1,10 +1,10 @@
 body {
     background-color: #292929;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    display: flex; /* body özelliğinde sayfada ortalasın diye kullandım*/
+    flex-direction: column; /* body içerisine eklenecek elemanlar alt alta gelsin*/
+    align-items: center; /* body özelliğinde sayfada ortalasın diye kullandım*/
+    justify-content: center;   /* body özelliğinde sayfada ortalasın diye kullandım*/
+    height: 100vh; /* body özelliğinde sayfanın tamamını kullansın*/
     margin: 0;
     color: #fff;
 }
@@ -39,7 +39,7 @@ body {
 }
 
 .row {
-    display: flex;
+    display: flex;  /* bunlar blok elemanı ve flrex yazmazsam alt alta gelecekler */
 }
 
 .screen {
